@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="6.38.0" timestamp="2022-02-23T10:30:00.000+01:00">
+    <file name="maven-project/server/src/main/java/com/example/Greeter.java ">
+        <violation beginline="10" endline="10" begincolumn="5" endcolumn="20" rule="UnusedPrivateField" ruleset="Java Basic"/>
+        <violation beginline="25" endline="25" begincolumn="10" endcolumn="30" rule="AvoidDuplicateLiterals" ruleset="Java Basic"/>
+    </file>
+    <file name="maven-project/server/src/test/java/com/example/TestGreeter.java">
+        <violation beginline="15" endline="15" begincolumn="8" endcolumn="25" rule="EmptyCatchBlock" ruleset="Java Basic"/>
+        <violation beginline="35" endline="35" begincolumn="15" endcolumn="40" rule="CyclomaticComplexity" ruleset="Java Basic"/>
+    </file>
+</pmd>
