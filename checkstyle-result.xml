@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.0">
-  <repository name="src">
+  <file name="server/src/main/java/com/example/Greeter.java">
     <error line="12" column="5" severity="warning" message="Line is longer than 80 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-    <error line="15" column="1" severity="error" message="Missing Javadoc comment for public class." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+    <error line="15" column="1" severity="error" message="Missing Javadoc comment for public class Greeter.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
     <error line="25" column="1" severity="error" message="Unused import - java.util.*." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-  </repository>
+  </file>
+  <file name="/server/src/test/java/com/example/TestGreeter.java">
+    <error line="12" column="5" severity="warning" message="Line is longer than 80 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+    <error line="15" column="1" severity="error" message="Missing Javadoc comment for public class TestGreeter.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+    <error line="25" column="1" severity="error" message="Unused import - java.util.*." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+  </file>
+  
 </checkstyle>
