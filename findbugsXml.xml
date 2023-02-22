@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BugCollection>
+  <Project projectName="maven-project" projectVersion="1.0"/>
+  <BugInstance type="NP_NULL_PARAM_DEREF_ALL_TARGETS_DANGEROUS" priority="High" rank="19" abbrev="NP" category="CORRECTNESS">
+    <Class classname="com.example.Greeter"/>
+    <Method name="myMethod" signature="(Ljava/lang/String;)V"/>
+    <SourceLine classname="com.example.MyClass" start="13" end="43" sourcefile="Greeter.java"/>
+    <Message>NullPointerException is guaranteed to be thrown as `value` is nullable and is passed as a parameter without @Nonnull annotation.</Message>
+    <LongMessage><![CDATA[Passing parameter `value` which is nullable to method `fct01` without null check or @Nonnull annotation in `com.example.Greeter`.  A `NullPointerException` is guaranteed to be thrown when the null value is dereferenced inside the method.]]></LongMessage>
+  </BugInstance>
+  <BugInstance type="REC_CATCH_EXCEPTION" priority="Normal" rank="15" abbrev="REC" category="CORRECTNESS">
+    <Class classname="com.example.Greeter"/>
+    <Method name="greet" signature="(Ljava/lang/String;)V"/>
+    <SourceLine classname="com.example.TestGreeter" start="27" end="57" sourcefile="TestGreeter.java"/>
+    <Message>Swallowing an exception that should never be ignored.</Message>
+    <LongMessage><![CDATA[Method `anotherMethod` in `com.example.TestGreeter` swallows an exception that should never be ignored.  The exception is caught and then discarded, without any further handling or logging.  This can make it difficult to diagnose and fix any underlying problems.]]></LongMessage>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="Low" rank="15" abbrev="URF" category="STYLE">
+    <Class classname="com.example.TestGreeter"/>
+    <Field name="someone"/>
+    <SourceLine classname="com.example.YetAnotherClass" start="7" end="17" sourcefile="Greeter.java"/>
+    <Message>Unread field: `someone`.</Message>
+    <LongMessage><![CDATA[Field `unusedField` in `com.example.Greeter` is never read or used.  Consider removing it or using it to improve the class functionality.]]></LongMessage>
+  </BugInstance>
+</BugCollection>
